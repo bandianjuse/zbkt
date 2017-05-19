@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include head %>
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="/lib/suimobile/sm.min.css">
+    <link rel="stylesheet" href="/phone/iconfont/iconfont.css" >
+    <link rel="stylesheet" href="/phone/css/user.css">
+</head>
+<body  ng-app="webapp">
+<div class="page" ng-controller="UserSetController" id="userCenter">
+    <header class="bar bar-nav hz-style">
+        <a href="/wealth/<%=user.id%>" class="icon icon-left pull-left"></a>
+        <h1 class="title">账户设置</h1>
+    </header>
+
+    <div class="content user-info">
+        <form  name="userform" novalidate=”novalidate”>
+            <div class="list-block">
+                <ul>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">头像</div>
+                                <div class="item-input tx-img">
+                                    <!--<input id="txFile" type="file" name="upload">-->
+                                    <img ng-src="{{user.portrait}}" id="txImg" />
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">昵称</div>
+                                <div class="item-input">
+                                    <input type="text"  name="name" ng-model="user.name" ng-maxlength="8" required>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">地区</div>
+                                <div class="item-input">
+                                    <input type="text" id='city-picker' value="<%=user.region%>" />
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">账号</div>
+                                <div class="item-input">
+                                    <div class="phone" ng-bind="user.phone" ></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">邮箱</div>
+                                <div class="item-input">
+                                    <input type="email" name="email" ng-model="user.email"  placeholder="未设置邮箱">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-block">
+                <input type="button" ng-click="submit()" class="button button-big button-fill button-danger" value="确定修改"/>
+                <!--<input type="button" ng-click="logout()" class="button button-big button-fill button-danger logout" value="退出账号"/>-->
+                <input type="hidden" value="<%=JSON.stringify(user)%>" id="userInfo" >
+            </div>
+        </form>
+    </div>
+
+</div>
+<% include menu %>
+<script type="text/javascript" src="/phone/dist/user.min.js"></script>
+<script>
+    
+</script>
+</body>
+</html>

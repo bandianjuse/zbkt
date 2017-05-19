@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include head %>
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="/lib/suimobile/sm.min.css">
+    <link rel="stylesheet" href="/phone/iconfont/iconfont.css" >
+    <link rel="stylesheet" href="/phone/css/user.css">
+</head>
+<body  ng-app="webapp">
+<div class="page page-current"  id="details">
+    <header class="bar bar-nav hz-style">
+        <a class="icon icon-menu pull-left open-panel" data-panel='#opnePanel'><span>菜单</span></a>
+        <h1 class="title">财富中心</h1>
+    </header>
+    <div class="content">
+        <div class="details-top"><img src="/phone/images/details_top.jpg"  ></div>
+        <div class="user-center">
+            <a href="/user">
+                <div class="row">
+                    <div class="col-20">
+                        <img src="<%=user.portrait%>" class="tx" />
+                    </div>
+                    <div class="col-80">
+                        <div class="row">
+                            <div class="col-80">
+                                <div class="name"><%=user.name%></div>
+                                <div class="amount">当前财富：<b><%=distributionTotal%></b> 元</div>
+                            </div>
+                            <div class="col-20 icon">
+                                <span class="icon icon-right"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="fz"></div>
+        <div class="money-list">
+            <div class="money-list-title">
+                <span>联系电话</span>
+                <span>开户</span>
+                <span>开户提成</span>
+                <span>交易</span>
+                <span>交易提成</span>
+            </div>
+            <ul id="dataList">
+                <% dataList.forEach(function(info){ %>
+
+                    <% distribution.forEach(function(d){ %>
+                    <%if(d.userId == info._id ){ %>
+                    <li>
+                        <span><img src="<%=info.portrait%>" class="touxiang" /><%=info.phone%></span>
+                        <span>
+                            <%if(d.opneAccount){ %>
+                            是
+                            <% }else{ %>
+                            <a href="#">提醒</a>
+                            <% } %>
+                        </span>
+                        <span><b><%=d.opneAccountBonus%></b> 元</span>
+                        <span>
+                            <%if(d.trading){ %>
+                            是
+                            <% }else{ %>
+                            <a href="#">提醒</a>
+                            <% } %>
+                        </span>
+                        <span><b><%=d.tradingBonus%></b> 元</span>
+                    </li>
+                    <% } %>
+                    <% }) %>
+
+                <% }) %>
+            </ul>
+        </div>
+    </div>
+
+
+
+</div>
+
+<% include menu %>
+<script type="text/javascript" src="/phone/dist/user.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+body {
+  background: #fff;
+  font-family: "微软雅黑";
+}
+.page,
+.page-group {
+  background: #fff;
+}
+a,
+a:visited,
+a:active,
+a:hover {
+  text-decoration: none;
+}
+.hz-style.panel {
+  background: url("../images/bar_bg.jpg") #fff no-repeat;
+  background-size: 100% ;
+  position: relative;
+}
+.hz-style.panel .content-block {
+  padding: 0;
+}
+.hz-style.panel .header {
+  padding: 0.5rem 0.75rem 0.8rem 0.75rem;
+}
+.hz-style.panel .header .tx {
+  width: 2.5rem;
+  height: 2.5rem;
+  -webkit-border-radius: 1.25rem;
+  -moz-border-radius: 1.25rem;
+  border-radius: 1.25rem;
+}
+.hz-style.panel .header .header-btn {
+  text-align: right;
+  padding-top: 2.7rem;
+}
+.hz-style.panel .header .header-btn a {
+  color: #fff;
+}
+.hz-style.panel .header .header-btn i {
+  transition: all .2s;
+  -webkit-transition: all .2s;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  font-size: 0.7rem;
+}
+.hz-style.panel .header .xm a {
+  font-size: 0.7rem;
+  padding-left: 0.25rem;
+  color: #fff;
+}
+.hz-style.panel .header .dj {
+  text-align: right;
+  color: #fff;
+  font-size: 0.6rem;
+  padding-top: 3rem;
+}
+.hz-style.panel .header .dj span {
+  color: #ffa200;
+}
+.hz-style.panel .list-menu.menu-two {
+  display: none;
+}
+.hz-style.panel .list-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.hz-style.panel .list-menu li a {
+  display: block;
+  padding: 0 0.75rem;
+  color: #666;
+  line-height: 2.5rem;
+}
+.hz-style.panel .list-menu li a i {
+  font-size: 1.4rem;
+  width: 1.5rem;
+  margin-right: 0.75rem;
+}
+.hz-style.panel .list-menu li a .zb {
+  color: #e60012;
+}
+.hz-style.panel .list-menu li a .hf {
+  color: #90c321;
+}
+.hz-style.panel .list-menu li a .zx {
+  font-size: 1.3rem;
+  color: #ec6941;
+  vertical-align: top;
+}
+.hz-style.panel .list-menu li a .kh {
+  font-size: 1.1rem;
+  color: #e60012;
+  vertical-align: top;
+}
+.hz-style.panel .list-menu li a .jy {
+  font-size: 1.1rem;
+  color: #f8b551;
+  vertical-align: top;
+}
+.hz-style.panel .list-menu li a .zhanghu {
+  font-size: 1.1rem;
+  color: #ec6941;
+  vertical-align: top;
+}
+.hz-style.panel .list-menu li a .caifu {
+  font-size: 1.1rem;
+  color: #f8b551;
+  vertical-align: top;
+}
+.hz-style.panel .list-menu li a.active,
+.hz-style.panel .list-menu li a:active {
+  background: #dcdcdc;
+}
+.hz-style.panel .single-page {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0;
+}
+.hz-style.panel .single-page a {
+  display: block;
+  font-size: 0.7rem;
+  color: #666;
+  padding: 0.25rem 0.75rem;
+}
+.panel-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0.7;
+}
+.hz-style.bar {
+  background: #0049f2;
+  color: #fff;
+}
+.hz-style.bar .title {
+  color: #fff;
+}
+.hz-style.bar a.icon {
+  color: #fff;
+  font-weight: 500;
+}
+.hz-style.bar a.icon span {
+  font-size: 0.7rem;
+  padding-left: 0.25rem;
+}
+.hz-style.bar .iconfont {
+  color: #fff;
+}
+.live-video {
+  background: #ccc;
+  height: 10rem;
+}
+.live-video img {
+  width: 100%;
+  height: 100%;
+}
+.popup-share {
+  height: 45%;
+  top: 55%;
+}
+.popup-share .content-block {
+  margin: 0.5rem 0;
+  padding: 0;
+}
+.popup-share h3 {
+  font-weight: normal;
+  padding: 0 0.5rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+.popup-share p {
+  color: #999;
+  font-size: 0.7rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+#ckepop {
+  text-align: center;
+}
+#ckepop a {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  margin: 0.5rem 1rem;
+}
+#ckepop .jiathis_button_weixin {
+  background: url("../images/weixin.png") no-repeat;
+  background-size: 100%;
+}
+#ckepop .jiathis_button_pengyou {
+  background: url("../images/pengyou.png") no-repeat;
+  background-size: 100%;
+}
+#ckepop .jiathis_button_cqq {
+  background: url("../images/qq.png") no-repeat;
+  background-size: 100%;
+}
+#ckepop .jiathis_button_qzone {
+  background: url("../images/qzone.png") no-repeat;
+  background-size: 100%;
+}
+#ckepop .jiathis_button_tsina {
+  background: url("../images/tsina.png") no-repeat;
+  background-size: 100%;
+}
+#ckepop .jiathis_button_sms {
+  background: url("../images/sms.png") no-repeat;
+  background-size: 100%;
+}
+#ckepop .jiathis_button_copy {
+  width: 5rem;
+  background: url("../images/copy.png") no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 0.5rem;
+  right: 0;
+}
+#ckepop .jiathis_txt {
+  opacity: 0;
+}
+.user-info {
+  background: #e5e5e5;
+}
+.user-info .list-block {
+  border-top: none;
+}
+.user-info .phone {
+  text-align: right;
+  color: #999;
+}
+.user-info ul:before {
+  background: #fff;
+}
+.user-info ul:nth-child(2) {
+  margin-top: 0.75rem;
+}
+.user-info ul:nth-child(3) {
+  margin-top: 0.75rem;
+}
+.user-info .list-block {
+  margin: 0;
+}
+.user-info .tx-img {
+  text-align: right;
+}
+.user-info .tx-img img {
+  width: 3rem;
+  height: 3rem;
+  margin: 0.75rem 0 0.5rem 0;
+}
+.user-info #txFile {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  opacity: 0;
+  margin-top: 0.75rem;
+}
+.user-info .item-inner {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.user-info .item-zh {
+  text-align: right;
+}
+.user-info .item-input input {
+  text-align: right;
+  color: #999;
+}
+.user-info .item-content {
+  padding-left: 0;
+}
+.user-info .item-content a {
+  display: block;
+  width: 100%;
+  color: #3d4145;
+}
+.user-info .logout {
+  background-color: #eb6941;
+  margin-top: 0.5rem;
+}
+.picker-modal {
+  background: #fff;
+}
+.picker-modal .picker-items {
+  font-size: 1rem;
+}
+#details .fz {
+  background: #e5e5e5;
+  height: 0.75rem;
+}
+#details .details-top {
+  height: 9rem;
+}
+#details .details-top img {
+  width: 100%;
+  height: 100%;
+}
+#details .user-center {
+  background: #fff;
+}
+#details .user-center a {
+  display: block;
+  color: #3d4145;
+}
+#details .user-center .tx {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 1rem;
+  -webkit-border-radius: 1.25rem;
+  -moz-border-radius: 1.25rem;
+  border-radius: 1.25rem;
+}
+#details .user-center .name {
+  font-weight: bold;
+  padding: 1rem 0.5rem 0.25rem 0.5rem;
+}
+#details .user-center .amount {
+  font-size: 0.7rem;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+}
+#details .user-center .amount b {
+  color: #e60000;
+}
+#details .user-center .icon {
+  text-align: right;
+  padding-right: 0.5rem;
+  padding-top: 0.75rem;
+}
+#details .money-list {
+  background: #fff;
+}
+#details .money-list .money-list-title {
+  font-size: 0.7rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+#details .money-list .money-list-title span {
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+}
+#details .money-list .money-list-title span:nth-child(2),
+#details .money-list .money-list-title span:nth-child(4) {
+  width: 10%;
+}
+#details .money-list .money-list-title span:nth-child(1) {
+  width: 34%;
+}
+#details .money-list ul {
+  margin: 0 0.5rem;
+  padding: 0.25rem 0;
+  list-style: none;
+}
+#details .money-list ul li {
+  font-size: 0.7rem;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+#details .money-list ul li b {
+  color: #e60000;
+  font-weight: normal;
+}
+#details .money-list ul li span {
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+}
+#details .money-list ul li span:nth-child(2),
+#details .money-list ul li span:nth-child(4) {
+  width: 10%;
+}
+#details .money-list ul li span:nth-child(1) {
+  width: 34%;
+}
+#details .money-list ul li .touxiang {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.25rem;
+  border-radius: 0.5rem;
+  vertical-align: middle;
+}

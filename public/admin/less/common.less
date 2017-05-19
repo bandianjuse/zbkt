@@ -1,0 +1,52 @@
+@import "components.less";
+
+body{
+  font-family: "微软雅黑";
+}
+.header{
+  height:60px;
+  background: #f5f5f5;
+  border-bottom:1px solid #ddd;
+  h3{
+    line-height:60px;
+    font-size:22px;
+    padding-left:30px;
+  }
+}
+.menu{
+  ul{
+    padding:0;
+    margin:0;
+    margin-top:30px;
+    list-style: none;
+    a{
+      display: block;
+      padding:10px 20px;
+      color:#666;
+      text-decoration: none;
+      /*transition: color 1s;
+      -webkit-transition: color 1s;*/
+      &.active{
+        color:#e60012;
+      }
+      &:hover{
+        color:#e60012;
+      }
+      span{
+        width:100px;
+        display: inline-block;
+        text-align: right;
+      }
+      i{
+        vertical-align: middle;
+        font-size:20px;
+        display:none;
+      }
+    }
+  }
+}
+.admin-breadcrumb{
+  padding:0;
+  list-style: none;
+  margin:20px 0;
+}

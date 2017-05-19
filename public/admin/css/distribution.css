@@ -1,0 +1,123 @@
+.alert {
+  position: fixed;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 99999;
+}
+.loading {
+  position: absolute;
+  z-index: 99999;
+  width: 200px;
+  text-align: center;
+}
+.loading .icon {
+  width: 30px;
+  height: 45px;
+  margin: 0 auto;
+  animation: rotate 1s linear infinite;
+  -webkit-animation: rotate 1s linear infinite;
+}
+.loading .icon i {
+  color: #666;
+  display: block;
+  font-size: 30px;
+}
+.loading .text {
+  color: #666;
+  font-size: 16px;
+  padding: 3px;
+}
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 88888;
+  background: #fff;
+  opacity: 0.5;
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+body {
+  font-family: "微软雅黑";
+}
+.header {
+  height: 60px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+.header h3 {
+  line-height: 60px;
+  font-size: 22px;
+  padding-left: 30px;
+}
+.menu ul {
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+  list-style: none;
+}
+.menu ul a {
+  display: block;
+  padding: 10px 20px;
+  color: #666;
+  text-decoration: none;
+  /*transition: color 1s;
+      -webkit-transition: color 1s;*/
+}
+.menu ul a.active {
+  color: #e60012;
+}
+.menu ul a:hover {
+  color: #e60012;
+}
+.menu ul a span {
+  width: 100px;
+  display: inline-block;
+  text-align: right;
+}
+.menu ul a i {
+  vertical-align: middle;
+  font-size: 20px;
+  display: none;
+}
+.admin-breadcrumb {
+  padding: 0;
+  list-style: none;
+  margin: 20px 0;
+}
+.results {
+  margin-top: 30px;
+}
+.results .no-data {
+  text-align: center;
+}
+.results .results-title {
+  padding-bottom: 15px;
+  display: none;
+}
+.results table {
+  display: none;
+}
+.results .total {
+  padding: 0 20px;
+}
+.results .total span {
+  border: none;
+  padding: 0;
+}
+#reviewModal .c-indicator {
+  margin-top: 3px;
+}
+#reviewModal label {
+  text-align: right;
+}

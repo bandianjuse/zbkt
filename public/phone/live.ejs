@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include head %>
+    <link rel="stylesheet" href="/lib/suimobile/sm.min.css">
+    <link rel="stylesheet" href="/phone/iconfont/iconfont.css" >
+    <link rel="stylesheet" href="/phone/css/live.css">
+    <script type="text/javascript" charset="utf-8" src="/lib/leshiyun/blive.js"></script>
+</head>
+<body  ng-app="webapp">
+<div class="page">
+    <header class="bar bar-nav hz-style">
+        <a class="icon icon-menu pull-left open-panel" data-panel='#opnePanel'><span>菜单</span></a>
+        <h1 class="title">直播</h1>
+        <!--<a class="pull-right open-share" id='share'><i class="icon iconfont">&#xe605;</i></a>-->
+    </header>
+    <div class="content">
+        <div class="announcement">公告：<%  if(typeof info.live === 'object'){ %><%=info.live.announcement%><% } %></div>
+        <div class="live-video" id="playDiv">
+
+        </div>
+        <div class="discuss" ng-controller="LiveController">
+            <div class="status-title"><i class="icon iconfont">&#xe611;</i> <span class="dian"></span>即时聊天
+                <div class="pull-right status-item">
+                    <a href="javascript:" class="siliao"><i class="icon iconfont">&#xe612;</i></a>
+                    <a href="<%=openAccountLink%>" class="kaihu external"><i class="icon iconfont">&#xe614;</i></a>
+                    <a href="/consulting/<%=user.id%>" class="zixun"><i class="icon iconfont">&#xe615;</i></a>
+                    <a href="javascript:" class="yaoqing"><i class="icon iconfont">&#xe616;</i></a>
+                </div>
+            </div>
+            <div class="other-content" id="publicContent">
+                <div class="sys-mes" id="sysMes"></div>
+                <div id="message" class="row other-say no-gutter"  style="display: none">
+                    <div class="col-20">
+                        <img src="<%=user.portrait%>" class="tx" />
+                    </div>
+                    <div class="col-80">
+                        <div class="row no-gutter">
+                            <div class="col-80">
+                                <div><span class="name"></span> <span class="time">10:36</span></div>
+                                <div class="cont"></div>
+                            </div>
+                            <div class="col-20 operate"><i class="icon iconfont">&#xe60e;</i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row say no-gutter" id="publicSay">
+                <div class="col-20">
+                    <img src="<%=user.portrait%>" class="tx" />
+                </div>
+                <div class="col-80">
+                    <div class="row no-gutter">
+                        <div class="col-80"><input type="text" class="say-input"  placeholder="请说出您想说的话"  ></div>
+                        <div class="col-20" style="text-align: right"><a href="javascript:"  class="say-submit"><i class="icon iconfont jy">&#xe60a;</i></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="private-message">
+    <div class="menu">
+        <div class="sl"><i class="icon iconfont" >&#xe612;</i></div>
+        <a href="http://wechat1.gdmex.com/register/0122hz/sc/205680#pageSignin" class="kh external"><i class="icon iconfont" >&#xe614;</i></a>
+        <a href="/consulting/<%=user.id%>" class="ask"><i class="icon iconfont" >&#xe615;</i></a>
+    </div>
+    <div  class="wenzi">
+        <div>私聊</div>
+        <div>开户</div>
+        <div>咨询</div>
+    </div>
+    <div class="opne"><i class="icon iconfont" >&#xe60f;</i></div>
+</div>
+<div class="popup popup-private-chat">
+    <div class="content-block">
+        <div  class="sl"><i class="icon iconfont" >&#xe612;</i> 私聊<span><i class="icon iconfont">&#xe606;</i> 此过程将全程加密，不予公开</span></div>
+        <div class="other-content" id="privateContent">
+
+        </div>
+        <div class="row say no-gutter" id="privateSay">
+            <div class="col-20">
+                <img src="<%=user.portrait%>" class="tx" />
+            </div>
+            <div class="col-80">
+                <div class="row no-gutter">
+                    <div class="col-80"><input type="text" class="say-input"  placeholder="回复消息"  ></div>
+                    <div class="col-20" style="text-align: right"><a href="javascript:"   class="say-submit" data-to="<%=JSON.stringify(admin)%>"><i class="icon iconfont jy">&#xe60a;</i></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" value="<%=JSON.stringify(user)%>" id="user">
+<input type="hidden" value="<%=info.live.filter%>" id="filter">
+<script type="text/javascript" src="/phone/dist/live.min.js"></script>
+<script>
+    //A20160324000005s   A2016010500713
+    var player = new CloudLivePlayer ();
+    player.init({
+        activityId : "<%  if(typeof info.live === 'object'){ %><%=info.live.activityId%><% } %>",
+    },"playDiv");
+</script>
+<% include menu %>
+
+</body>
+</html>

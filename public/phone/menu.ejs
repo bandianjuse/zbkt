@@ -1,0 +1,31 @@
+<div class="panel-overlay"></div>
+<div class="panel panel-left panel-cover hz-style" id='opnePanel'>
+    <div class="content-block">
+        <div class="row no-gutter header" id="tabMenu">
+            <div class="col-80" >
+                <div><a href="javascript:"><img src="<%=user.portrait%>" class="tx" /></a></div>
+                <div class="xm"><a href="javascript:"><%=user.name%></a></div>
+            </div>
+            <div class="col-20 header-btn">
+                <a href="javascript:"><i class="icon icon-caret"></i></a>
+            </div>
+        </div>
+        <!--57203e9f8d99d05b0959ee57-->
+        <ul class="list-menu menu-one">
+            <li><a href="/live/<%=user.id%>" class="active"><i class="icon iconfont zb">&#xe60b;</i>直播</a></li>
+            <li><a href="/playback/<%=playbackId%>/fx/<%=user.id%>"><i class="icon iconfont hf">&#xe603;</i>回放</a></li>
+            <li><a href="/consulting/<%=user.id%>"><i class="icon iconfont zx">&#xe609;</i>咨询</a></li>
+            <li><a href="<%=openAccountLink%>" class="external"><i class="icon iconfont kh">&#xe614;</i>开户</a></li>
+            <li><a href="<%=tradingLink%>" class="external"><i class="icon iconfont jy">&#xe607;</i>交易</a></li>
+        </ul>
+        <ul class="list-menu menu-two">
+            <li><a href="/wealth/<%=user.id%>" class="active"><i class="icon iconfont caifu">&#xe617;</i>财富中心</a></li>
+            <li><a href="/user"><i class="icon iconfont zhanghu">&#xe613;</i>账户设置</a></li>
+        </ul>
+        <div class="single-page">
+            <a href="/statement" >免责声明</a>
+            <a href="/service" >服务中心</a>
+            <a href="/about" >关于我们</a>
+        </div>
+    </div>
+</div>

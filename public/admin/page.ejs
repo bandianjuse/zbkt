@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html  menu="2">
+<head>
+    <meta charset="UTF-8">
+    <title>直播课堂后台管理</title>
+    <link rel="stylesheet" href="/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/lib/calendar/jquery-calendar.css">
+    <link rel="stylesheet" href="/lib/simditor/styles/simditor.css" />
+    <link rel="stylesheet" href="/admin/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/admin/css/system.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <% include menu %>
+        <div class="col-sm-10">
+            <ul class="admin-breadcrumb">
+                <li class="active"><i class="iconfont sys-title">&#xe606;</i> 单页信息</li>
+            </ul>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary set-btn">关于我们</button>
+                <button type="button" class="btn btn-secondary set-btn">免责声明</button>
+                <button type="button" class="btn btn-secondary set-btn">服务中心</button>
+            </div>
+            <div class="set-main">
+                <!--关于我们-->
+                <div class="set-cont active">
+                    <textarea class="form-control" id="about"   rows="10" ><%-about%></textarea>
+                    <button type="button" class="btn btn-success editSubmit about" style=" margin-top: 30px;" >确定修改</button>
+                </div>
+                <!--关于我们结束-->
+                <!--免责声明-->
+                <div class="set-cont">
+                    <textarea class="form-control" id="statement"   rows="10" ><%-statement%></textarea>
+                    <button type="button" class="btn btn-success editSubmit statement" style=" margin-top: 30px;">确定修改</button>
+                </div>
+                <!--免责声明结束-->
+                <!--服务中心-->
+                <div class="set-cont">
+                    <textarea class="form-control" id="service"   rows="10" ><%-service%></textarea>
+                    <button type="button" class="btn btn-success editSubmit service" style=" margin-top: 30px;">确定修改</button>
+                </div>
+                <!--服务中心结束-->
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="timeDate" >
+<script type="text/javascript" src="/admin/dist/infoPage.min.js"></script>
+</body>
+</html>

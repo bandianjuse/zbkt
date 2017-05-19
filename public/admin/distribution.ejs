@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html  menu="3">
+<head>
+    <meta charset="UTF-8">
+    <title>直播课堂后台管理</title>
+    <link rel="stylesheet" href="/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/lib/calendar/jquery-calendar.css">
+    <link rel="stylesheet" href="/admin/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/admin/css/distribution.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <% include menu %>
+        <div class="col-sm-10">
+            <ul class="admin-breadcrumb">
+                <li class="active"><i class="iconfont sys-title">&#xe605;</i> 分销管理</li>
+            </ul>
+            <div class="search">
+                <p><small>输入用户的姓名或电话，进行查询。【分销者】：查询此用户的下线列表，【用户】：查询自身信息</small></p>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="name">姓名：</label>
+                        <input type="text" class="form-control" id="name" placeholder="输入姓名">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">电话：</label>
+                        <input type="text" class="form-control" id="phone" placeholder="输入电话">
+                    </div>
+                    <select class="form-control" id="state">
+                        <option value="0">分销者</option>
+                        <option value="1">用户</option>
+                    </select>
+                    <button type="button" class="btn btn-primary" id="searchSubmit">搜索</button>
+                </form>
+            </div>
+            <div class="results">
+                <div class="results-title"></div>
+                <table class="table table-striped" id="resultsTable">
+                    <thead>
+                    <tr>
+                        <th class="no-introducer">推荐人</th>
+                        <th>姓名</th>
+                        <th>电话</th>
+                        <th>邮箱</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="resultsTr"></tbody>
+                </table>
+                <nav id="fxPage" style="display: none">
+                    <ul class="pager" >
+                        <li><a href="javascript:" class="first">首页</a></li>
+                        <li><a href="javascript:" class="prev">上一页</a></li>
+                        <li class="total"><span class="now-page">1</span>/<span class="total-page">5</span> 页</li>
+                        <li><a href="javascript:" class="next">下一页</a></li>
+                        <li><a href="javascript:" class="last">尾页</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 审核模态框 -->
+<div class="modal fade" id="reviewModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">审核信息</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group row">
+                        <label  class="col-sm-3 ">是否开户：</label>
+                        <div class="col-sm-9">
+                            <label class="c-input c-radio">
+                                <input id="unOpneAccount" name="opneAccount" type="radio">
+                                <span class="c-indicator"></span>未开户
+                            </label>
+                            <label class="c-input c-radio">
+                                <input id="opneAccount" name="opneAccount" type="radio"><span class="c-indicator"></span>已开户
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="opneAccountBonus"  class="col-sm-3 form-control-label">开户提成：</label>
+                        <div class="col-sm-4">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="opneAccountBonus" placeholder="输入开户提成">
+                                <div class="input-group-addon">元</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label  class="col-sm-3 ">是否交易：</label>
+                        <div class="col-sm-9">
+                            <label class="c-input c-radio">
+                                <input id="unTrading" name="trading" type="radio">
+                                <span class="c-indicator"></span>未交易
+                            </label>
+                            <label class="c-input c-radio">
+                                <input id="trading" name="trading" type="radio">
+                                <span class="c-indicator"></span>已交易
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="tradingBonus"  class="col-sm-3 form-control-label">交易提成：</label>
+                        <div class="col-sm-4">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="tradingBonus" placeholder="输入交易提成">
+                                <div class="input-group-addon">元</div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="reviewSubmit">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="timeDate" >
+<script type="text/javascript" src="/admin/dist/distribution.min.js"></script>
+</body>
+</html>

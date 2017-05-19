@@ -1,0 +1,41 @@
+<div class="popup popup-share">
+    <div class="content-block">
+        <h3>汇中微交易直播</h3>
+        <p>专业的直播交易平台，让您轻松赚大钱...</p>
+        <div>
+            <!-- JiaThis Button BEGIN -->
+
+            <div id="ckepop">
+                <a class="jiathis_button_copy"></a>
+                <a class="jiathis_button_pengyou"></a>
+                <a class="jiathis_button_weixin"></a>
+                <a class="jiathis_button_cqq"></a>
+                <a class="jiathis_button_qzone"></a>
+                <a class="jiathis_button_tsina"></a>
+                <a class="jiathis_button_sms"></a>
+            </div>
+            <script>
+                var jiathis_config = {
+                    url: "http://127.0.0.1:3000/share/<%=id%>",
+                    title: "汇中微交易",
+                    summary:"专业的直播交易平台，让您轻松赚大钱...",
+                    pic:"/images/logo.png",
+                }
+            </script>
+            <script type="text/javascript" src="http://v2.jiathis.com/code/jia.js" charset="utf-8"></script>
+            <!-- JiaThis Button END -->
+            <script>
+                $(function(){
+                    $("#share").on("click",function(){
+                        $.popup('.popup-share')
+                    });
+                    $(document).on("click",".popup-overlay",function(){
+                        $.closeModal('.popup-share')
+                    });
+
+
+                });
+            </script>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html  menu="0">
+<head>
+    <meta charset="UTF-8">
+    <title>直播课堂后台管理</title>
+    <link rel="stylesheet" href="/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/lib/calendar/jquery-calendar.css">
+    <link rel="stylesheet" href="/admin/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/admin/css/system.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <% include menu %>
+        <div class="col-sm-10">
+            <ul class="admin-breadcrumb">
+                <li class="active"><i class="iconfont sys-title">&#xe602;</i> 系统设置</li>
+            </ul>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary set-btn">基本信息设置</button>
+                <button type="button" class="btn btn-secondary set-btn">时间区间设置</button>
+                <button type="button" class="btn btn-secondary set-btn">直播频道设置</button>
+                <button type="button" class="btn btn-secondary set-btn">咨询频道设置</button>
+            </div>
+            <div class="set-main">
+                <!--基本信息设置-->
+                <div class="set-cont basis active">
+                    <form>
+                        <div class="form-group row">
+                            <label for="siteTitle" class="col-sm-2 form-control-label">网站名称</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="siteTitle" value="<%=basis.siteTitle%>" placeholder="输入网站名称">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="siteKeywords" class="col-sm-2 form-control-label">关键字</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="siteKeywords" value="<%=basis.siteKeywords%>" placeholder="输入关键字">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="siteDescription" class="col-sm-2 form-control-label">网站简介</label>
+                            <div class="col-sm-4">
+                                <textarea class="form-control" id="siteDescription"  rows="3" placeholder="输入网站简介"><%=basis.siteDescription%></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="button" class="btn btn-success editSubmit basis">确定修改</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!--基本信息设置结束-->
+                <!--时间区间设置-->
+                <div class="set-cont set-time">
+                    <p><small>温馨提醒：这里可以设置不同时间区间跳转到不同的页面</small></p>
+                    <form>
+                        <% times.forEach(function(time){ %>
+                        <div class="form-group row tcont">
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                    <input type="text" class="form-control start" value="<%=time.start%>" maxlength="5" onfocus="$(this).calendar()"  >
+                                    <div class="input-group-addon"><i class="iconfont">&#xe607;</i></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                    <input type="text" class="form-control end"  value="<%=time.end%>" maxlength="5" onfocus="$(this).calendar()"  >
+                                    <div class="input-group-addon"><i class="iconfont">&#xe607;</i></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <select class="form-control type"  data-value="<%=time.type%>">
+                                    <option value="客服咨询">客服咨询</option>
+                                    <option value="直播课堂">直播课堂</option>
+                                    <option value="视频回放">视频回放</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-2">
+                                <button type="button" class="btn btn-link tadd">添加</button>
+                                <button type="button" class="btn btn-link tdel">删除</button>
+                            </div>
+                        </div>
+                        <% }) %>
+                        <div class="form-group row">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="button" class="btn btn-success editSubmit time">确定修改</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!--时间区间设置结束-->
+                <!--直播频道设置-->
+                <div class="set-cont set-live ">
+                    <form>
+                        <div class="form-group row">
+                            <label for="activityId" class="col-sm-2 form-control-label">直播视频源密钥</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" value="<%=live.activityId %>" id="activityId" placeholder="输入activityId">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="setAdmin" class="col-sm-2 form-control-label">设置频道管理员</label>
+                            <div class="col-sm-4">
+                                <select class="form-control" id="setAdmin" data-value="<%=live.admin %>">
+                                    <% users.forEach(function(user){ %>
+                                    <option value="<%=user._id %>"><%=user.name %></option>
+                                    <% }) %>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="filter" class="col-sm-2 form-control-label">发言内容过滤</label>
+                            <div class="col-sm-4">
+                                <textarea class="form-control" id="filter" rows="3" placeholder="每个词之间用中文逗号隔开" ><%=live.filter %></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="announcement" class="col-sm-2 form-control-label">直播公告</label>
+                            <div class="col-sm-4">
+                                <textarea class="form-control" id="announcement" rows="3" placeholder="输入直播公告"><%=live.announcement %></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="button" class="btn btn-success editSubmit live">确定修改</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!--直播频道设置结束-->
+                <!--咨询频道设置-->
+                <div class="set-cont set-consulting ">
+                    <form>
+                        <div class="form-group row">
+                            <label for="kfActivityId" class="col-sm-2 form-control-label">直播视频源密钥</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="kfActivityId" value="<%=consulting.activityId %>" placeholder="输入activityId">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="kfAdmin" class="col-sm-2 form-control-label">设置频道管理员</label>
+                            <div class="col-sm-4">
+                                <select class="form-control" id="kfAdmin" data-value="<%=consulting.admin %>">
+                                    <% users.forEach(function(user){ %>
+                                    <option value="<%=user._id %>"><%=user.name %></option>
+                                    <% }) %>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="online" class="col-sm-2 form-control-label">在线人数基数</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="online" value="<%=consulting.online %>" placeholder="输入在线人数基数">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="kfFilter" class="col-sm-2 form-control-label">发言内容过滤</label>
+                            <div class="col-sm-4">
+                                <textarea class="form-control" id="kfFilter" rows="3" placeholder="每个词之间用中文逗号隔开"><%=consulting.filter %></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="button" class="btn btn-success editSubmit consulting">确定修改</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!--咨询频道设置结束-->
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="timeDate" >
+<script type="text/javascript" src="/admin/dist/system.min.js"></script>
+</body>
+</html>

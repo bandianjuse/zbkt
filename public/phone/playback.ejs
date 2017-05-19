@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include head %>
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="/phone/iconfont/iconfont.css" >
+    <link rel="stylesheet" href="/phone/css/playback.css">
+</head>
+<body>
+<div class="page">
+    <header class="bar bar-nav hz-style">
+        <a class="icon icon-menu pull-left open-panel" data-panel='#opnePanel'><span>菜单</span></a>
+        <h1 class="title">回放</h1>
+        <!--<a class="pull-right" id='share'><i class="icon iconfont">&#xe605;</i></a>-->
+    </header>
+    <div class="content infinite-scroll infinite-scroll-bottom" data-distance="50">
+        <div class="live-video" >
+            <video id="media" width="100%" height="100%" controls="controls" webkit-playsinline>
+                <source src="<%=url%>">
+            </video>
+        </div>
+        <div class="list-block">
+            <ul class="list-container playback-list"></ul>
+        </div>
+        <!-- 加载提示符 -->
+        <div class="infinite-scroll-preloader">
+            <div class="preloader"></div>
+        </div>
+    </div>
+</div>
+<input type="hidden" value="<%=count%>" id="count">
+<input type="hidden" value="<%=phone%>" id="phone">
+<script type="text/javascript" src="/phone/dist/playback.min.js"></script>
+<% include menu %>
+</body>
+</html>

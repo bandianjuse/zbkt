@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include head %>
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="/lib/suimobile/sm.min.css">
+    <link rel="stylesheet" href="/phone/iconfont/iconfont.css" >
+    <link rel="stylesheet" href="/phone/css/user.css">
+</head>
+<body  ng-app="webapp">
+<div class="page page-current" >
+    <header class="bar bar-nav hz-style">
+        <a class="icon icon-menu pull-left open-panel" data-panel='#opnePanel'><span>菜单</span></a>
+        <h1 class="title"><%=title%></h1>
+    </header>
+    <div class="content">
+        <div class="content-block">
+            <%-content%>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/phone/dist/live.min.js"></script>
+<% include menu %>
+</body>
+</html>

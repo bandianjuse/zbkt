@@ -1,0 +1,39 @@
+{
+  "name": "huizhong",
+  "version": "0.1.0",
+  "description": "huizhongweijiaoyi",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "huizhong"
+  ],
+  "author": "huizhong",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.0.0-rc.5",
+    "body-parser": "^1.15.0",
+    "connect-mongo": "^0.4.1",
+    "connect-multiparty": "^2.0.0",
+    "connect-redis": "^3.0.2",
+    "cookie-parser": "^1.4.1",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "log4js": "^0.6.36",
+    "mongodb": "^2.1.15",
+    "mongoose": "^4.4.11",
+    "redis": "^2.6.0-1",
+    "socket.io": "^1.4.5",
+    "wechat-oauth": "~1.1.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-less": "^1.2.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-px2rem": "^0.2.1"
+  }
+}

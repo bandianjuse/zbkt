@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大数据平台用户管理系统</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="container-fluid main">
+    <div class="row">
+        <div class="col-sm-2">
+            <!--左侧菜单-->
+            <div class="left">
+                <h5><a href="main.html" ><i class="iconfont">&#xe60f;</i> 用户管理系统</a></h5>
+                <div class="menu" id="menu">
+                    <ul>
+                        <h6><i class="iconfont">&#xe60a;</i> 工具系统</h6>
+                        <li><a href="#">微信</a></li>
+                        <li><a href="#">QQ</a></li>
+                        <li><a href="#">邮箱</a></li>
+                        <li><a href="#">支付宝</a></li>
+                        <li><a href="#">短信</a></li>
+                        <li><a href="#">头条</a></li>
+                    </ul>
+                    <ul>
+                        <h6><i class="iconfont">&#xe607;</i> 数据系统</h6>
+                        <li><a href="#">地域</a></li>
+                        <li><a href="#">性别</a></li>
+                    </ul>
+                    <ul>
+                        <h6><i class="iconfont">&#xe609;</i> 内容系统</h6>
+                        <li><a href="#">云推热搜</a></li>
+                        <li><a href="#">云推广告文案编辑</a></li>
+                    </ul>
+                    <ul>
+                        <h6><i class="iconfont">&#xe609;</i> 用户互动系统</h6>
+                        <li><a href="#">云推多聊</a></li>
+                        <li><a href="#">云推秒发</a></li>
+                    </ul>
+                    <ul>
+                        <h6><i class="iconfont">&#xe606;</i> 直播课堂</h6>
+                        <li><a href="#">通用版</a></li>
+                        <li><a href="#">定制版</a></li>
+                        <li><a href="#">业务版</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--左侧菜单结束-->
+        </div>
+        <div class="col-sm-10 right">
+            <!--搜索-->
+            <div class="search clearfix">
+                <div class="pull-left">
+                    <div class="search-link">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="exampleInputAmount" placeholder="输入搜索关键字">
+                            <div class="input-group-addon" id="search"><i class="iconfont">&#xe601;</i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pull-right"><i class="iconfont">&#xe600;</i> <a href="#" class="label label-warning" style="margin-right:20px">12</a> <a href="user.html" class="xtxa"><img class="xtx" src="images/t018b83cc648853f307.jpg" > koo***@yeah.net</a> </div>
+            </div>
+            <!--搜索结束-->
+            <!--账户信息-->
+            <div class="head row">
+                <div class="col-sm-7" >
+                    <div class="row">
+                        <div class="col-sm-6" ><img class="xtx" src="images/t018b83cc648853f307.jpg" /></div>
+                        <div class="col-sm-6 yue" >
+                            <p>余额</p>
+                            <p class="qian"><span>1008,000.</span><small>00</small> 元</p>
+                            <p class="chongzhi"><a href="#" class="active">充值</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5 kefu" >
+                    <p>客服</p>
+                    <p><a href="#"><b>2</b></a> 续费管理</p>
+                    <p><span>问题回复</span> <a href="#"><b>1</b></a></p>
+                </div>
+            </div>
+            <!--账户信息结束-->
+            <!--套餐-->
+            <div class="package">
+                <div class="row">
+                    <div class="col-sm-3 taocan" >
+                        <div class="package-pt">
+                            <p><b>套餐一</b></p>
+                            <p>2999.00 元</p>
+                            <a href="#"><i class="iconfont">&#xe602;</i></a>
+                        </div>
+                        <div class="package-active">
+                            <p><b>套餐包含如下服务</b></p>
+                            <div class="fuwu" style="width:240px;">
+                                <p><i class="iconfont">&#xe608;</i> <span>微信</span></p>
+                            </div>
+                            <a href="javascript:" class="goumai" data-toggle="modal" data-target="#buyItem" >购买</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 taocan" >
+                        <div class="package-pt">
+                            <p><b>套餐二</b></p>
+                            <p>3499.00 元</p>
+                            <a href="#"><i class="iconfont">&#xe602;</i></a>
+                        </div>
+                        <div class="package-active" style="background: #81c368;border-color: #81c368">
+                            <p><b>套餐包含如下服务</b></p>
+                            <div class="fuwu" style="width:240px;">
+                                <p><i class="iconfont">&#xe608;</i> <span>微信</span><span>QQ</span></p>
+                            </div>
+                            <a href="javascript:" class="goumai" data-toggle="modal" data-target="#buyItem" >购买</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 taocan" >
+                        <div class="package-pt">
+                            <p><b>套餐三</b></p>
+                            <p>3999.00 元</p>
+                            <a href="#"><i class="iconfont">&#xe602;</i></a>
+                        </div>
+                        <div class="package-active"  style="background: #7ecff5;border-color: #7ecff5">
+                            <p><b>套餐包含如下服务</b></p>
+                            <div class="fuwu" style="width:240px;">
+                                <p><i class="iconfont">&#xe608;</i> <span>微信</span><span>QQ</span><span>邮箱</span></p>
+                            </div>
+                            <a href="javascript:" class="goumai" data-toggle="modal" data-target="#buyItem" >购买</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 taocan" >
+                        <div class="package-pt">
+                            <p><b>套餐四</b></p>
+                            <p>4499.00 元</p>
+                            <a href="#"><i class="iconfont">&#xe602;</i></a>
+                        </div>
+                        <div class="package-active" style="background: #1074d3; border-color: #1074d3">
+                            <p><b>套餐包含如下服务</b></p>
+                            <div class="fuwu">
+                                <p><i class="iconfont">&#xe608;</i> <span>微信</span><span>QQ</span><span>邮箱</span><span>支付宝</span></p>
+                                <p><i class="iconfont">&#xe608;</i> <span>短信</span></p>
+                            </div>
+                            <a href="javascript:" class="goumai" data-toggle="modal" data-target="#buyItem" >购买</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--套餐结束-->
+            <!--产品服务-->
+            <div class="product">
+                <h5>我的产品与服务</h5>
+                <div class="menu row">
+                    <ul class="col-sm-3">
+                        <h6><i class="iconfont">&#xe60a;</i> 工具系统</h6>
+                        <li><a href="use.html" class="clearfix">微信<i class="iconfont pull-right active">&#xe604;</i></a></li>
+                        <li><a href="#" class="clearfix" >QQ<i class="iconfont pull-right active">&#xe604;</i></a></li>
+                        <li><a href="#" class="clearfix">邮箱<i class="iconfont pull-right active">&#xe604;</i></a></li>
+                        <li><a href="#" class="clearfix">支付宝<i class="iconfont pull-right active">&#xe604;</i></a></li>
+                        <li><a href="#" class="clearfix">短信<i class="iconfont pull-right active">&#xe604;</i></a></li>
+                        <li><a href="#" class="clearfix">头条<i class="iconfont pull-right active">&#xe604;</i></a></li>
+                    </ul>
+                    <ul class="col-sm-3">
+                        <h6><i class="iconfont">&#xe607;</i> 数据系统</h6>
+                        <li><a href="#" class="clearfix">地域<i class="iconfont pull-right active">&#xe604;</i></a></li>
+                        <li><a href="#" class="clearfix">性别<i class="iconfont pull-right active">&#xe604;</i></a></li>
+                    </ul>
+                    <ul class="col-sm-3">
+                        <h6><i class="iconfont">&#xe609;</i> 内容系统</h6>
+                        <li><a href="#" class="clearfix">文字版<i class="iconfont pull-right active">&#xe604;</i></a></li>
+                        <li><a href="#" class="clearfix">图片和文字版<i class="iconfont pull-right active">&#xe604;</i></a></li>
+                        <li><a href="#" class="clearfix">文字、图片和视频版<i class="iconfont pull-right">&#xe604;</i></a></li>
+                        <li><a href="#" class="clearfix">H5游戏<i class="iconfont pull-right">&#xe604;</i></a></li>
+                    </ul>
+                    <ul class="col-sm-3">
+                        <h6><i class="iconfont">&#xe606;</i> 直播课堂</h6>
+                        <li><a href="#" class="clearfix">通用版<i class="iconfont pull-right active">&#xe604;</i></a></li>
+                        <li><a href="#" class="clearfix">定制版<i class="iconfont pull-right ">&#xe604;</i></a></li>
+                        <li><a href="#" class="clearfix">业务版<i class="iconfont pull-right ">&#xe604;</i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--产品结束-->
+        </div>
+    </div>
+</div>
+<!-- 套餐购买模态框 -->
+<div class="modal fade" id="buyItem" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h5 class="modal-title" id="myModalLabel">您的购物车</h5>
+            </div>
+            <div class="modal-body">
+                <div class="determine-item clearfix">
+                    <div class="clearfix">
+                        <span class="title">套餐一</span>
+                        <span class="je pull-right">金额：<b>300.00</b> 元</span>
+                    </div>
+                    <div class="tc">
+                        <span><i class="iconfont">&#xe608;</i> 微信</span>
+                        <span><i class="iconfont">&#xe608;</i> QQ</span>
+                        <span><i class="iconfont">&#xe608;</i> 支付宝</span>
+                        <span><i class="iconfont">&#xe608;</i> 短信</span>
+                        <span><i class="iconfont">&#xe608;</i> 头条</span>
+                    </div>
+                </div>
+                <small>当您的商品支持成功后，便可直接使用。</small>
+            </div>
+            <div class="modal-footer">
+                <div class="total clearfix">
+                    <span class="pull-left">小计：<b>500.00</b> 元</span>
+                    <span class="pull-right">您的余额为：<b>5000.00</b> 元</span>
+                </div>
+                <button type="button" class="btn btn-secondary btn-lg btn-block" tyle="margin-bottom:10px;" data-dismiss="modal">继续选购</button>
+                <button type="button" class="btn btn-warning btn-lg btn-block zf"><i class="iconfont">&#xe610;</i> 支付</button>
+                <div class="zf-input clearfix" style="display: none">
+                    <input type="text" class="form-control form-control-lg pull-left" id="pay" placeholder="请输入支付密码">
+                    <button type="button" class="btn btn-warning btn-lg pull-right zf">确定支付密码</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 套餐购买模态框结束 -->
+<script src="jquery/jquery.min.js" ></script>
+<script src="bootstrap/bootstrap.min.js" ></script>
+<script src="js/public.js" ></script>
+<script src="js/main.js" ></script>
+</body>
+</html>

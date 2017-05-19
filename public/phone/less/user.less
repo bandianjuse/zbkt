@@ -1,0 +1,171 @@
+@import "common.less";
+
+.user-info{
+  background: #e5e5e5;
+  .list-block{
+    border-top:none;
+  }
+  .phone{
+    text-align: right;
+    color:#999;
+  }
+  ul:before{
+    background: #fff;
+  }
+  ul:nth-child(2){
+    margin-top:15px;
+  }
+  ul:nth-child(3){
+    margin-top:15px;
+  }
+  .list-block{
+    margin:0;
+  }
+  .tx-img{
+    text-align: right;
+    img{
+      width:60px;
+      height:60px;
+      margin:15px 0 10px 0;
+    }
+  }
+  #txFile{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+    margin-top: 15px;
+  }
+  .item-inner{
+    padding-left:20px;
+    padding-right:20px;
+  }
+  .item-zh{
+    text-align: right;
+  }
+  .item-input{
+    input{
+      text-align: right;
+      color:#999;
+    }
+  }
+  .item-content{
+    padding-left:0;
+    a{
+      display: block;
+      width: 100%;
+      color: #3d4145;
+    }
+  }
+  .logout{
+    background-color: #eb6941;
+    margin-top:10px;
+  }
+}
+.picker-modal{
+  background: #fff;
+  .picker-items{
+    font-size:20px;
+  }
+
+}
+#details{
+  .fz{
+    background: #e5e5e5;
+    height:15px;
+  }
+  .details-top{
+    height: 180px;
+    img{
+      width:100%;
+      height:100%;
+    }
+
+  }
+  .user-center{
+    background: #fff;
+    a{
+      display:  block;
+      color:#3d4145;
+    }
+    .tx{
+      width:50px;
+      height:50px;
+      margin:20px;
+      -webkit-border-radius:25px;
+      -moz-border-radius:25px;
+      border-radius:25px;
+
+    }
+    .name{
+      font-weight: bold;
+      padding:20px 10px 5px 10px;
+    }
+    .amount{
+      font-size:14px;
+      padding:0 10px 10px 10px;
+      b{
+        color:#e60000;
+      }
+    }
+    .icon{
+      text-align: right;
+      padding-right:10px;
+      padding-top:15px;
+    }
+  }
+  .money-list{
+    background: #fff;
+
+    .money-list-title{
+      font-size:14px;
+      padding:10px;
+      border-bottom:1px solid #ddd;
+      span{
+        width:20%;
+        display: inline-block;
+        text-align: center;
+      }
+      span:nth-child(2),span:nth-child(4){
+        width:10%;
+      }
+      span:nth-child(1){
+        width: 34%;
+      }
+    }
+
+
+    ul{
+      margin:0 10px;
+      padding:5px 0;
+      list-style: none;
+      li{
+        font-size:14px;
+        padding:10px 0;
+        margin:0;
+        b{
+          color:#e60000;
+          font-weight: normal;
+        }
+        span{
+          width:20%;
+          display: inline-block;
+          text-align: center;
+        }
+        span:nth-child(2),span:nth-child(4){
+          width:10%;
+        }
+        span:nth-child(1){
+          width: 34%;
+        }
+        .touxiang{
+          width:20px;
+          height:20px;
+          margin-right:5px;
+          border-radius:10px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
